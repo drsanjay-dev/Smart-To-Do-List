@@ -1,0 +1,102 @@
+:root {
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --accent-color: #007bff;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+}
+.container {
+  width: 100%;
+  max-width: 400px;
+}
+header {
+  margin-bottom: 10px;
+  text-align: center;
+}
+#todo-form {
+  display: flex;
+  margin-bottom: 10px;
+}
+#new-task {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid var(--accent-color);
+  border-radius: 4px;
+}
+#todo-form button {
+  margin-left: 5px;
+  background: var(--accent-color);
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.filters {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+.filters button {
+  flex: 1;
+  background: none;
+  border: 1px solid var(--accent-color);
+  color: var(--accent-color);
+  padding: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.filters .active {
+  background: var(--accent-color);
+  color: #fff;
+}
+.progress-container {
+  width: 100%;
+  background: rgba(0,0,0,0.1);
+  border-radius: 4px;
+  margin-bottom: 10px;
+  height: 10px;
+  overflow: hidden;
+}
+#progress-bar {
+  height: 100%;
+  background: var(--accent-color);
+  width: 0%;
+  transition: width 0.3s ease;
+}
+#todo-list {
+  list-style: none;
+}
+li {
+  background: rgba(0,0,0,0.05);
+  margin-bottom: 5px;
+  padding: 8px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+li.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+.actions button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--accent-color);
+  margin-left: 5px;
+}
